@@ -1,14 +1,17 @@
 {
-  "name": "marp",
-  "version": "1.0.0",
+  "name": "marp-slide",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
-    "html": "marp slide/index.md --theme theme/slide.css --html --allow-local-files",
-    "preview": "marp slide/index.md --theme theme/slide.css --html --allow-local-files --preview",
-    "pptx": "marp slide/index.md --theme theme/slide.css --html --allow-local-files --pptx",
-    "pdf": "marp slide/index.md --theme theme/slide.css --html --allow-local-files --pdf"
+    "html": "marp --html --allow-local-files slide/index.md",
+    "preview": "marp --html slide/index.md --allow-local-files --preview",
+    "pptx": "marp slide/index.md --html --allow-local-files --pptx",
+    "pdf": "marp slide/index.md -c slide/.marprc.yml --html --allow-local-files --pdf"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.1.1"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.2.3",
+    "mermaid": "^11.12.0"
   }
 }
